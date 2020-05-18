@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace fivet_server
+namespace fivet.server
 {
     class Program
     {
