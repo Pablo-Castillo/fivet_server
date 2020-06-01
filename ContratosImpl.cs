@@ -35,12 +35,24 @@ namespace Fivet.ZeroIce
 
         public override Ficha obtenerFicha(int numero, Current current)
         {
-            throw new System.NotImplementedException();
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                FivetContext fc = scope.ServiceProvider.GetService<FivetContext>();
+                Ficha ficha = fc.Fichas.Find(numero);
+                fc.SaveChanges();
+                return ficha;
+            }
         }
 
         public override Ficha crearFicha(Ficha ficha, Current current)
         {
-            throw new System.NotImplementedException();
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                FivetContext fc = scope.ServiceProvider.GetService<FivetContext>();
+                fc.Fichas.Add(ficha);
+                fc.SaveChanges();
+                return ficha;
+            }
         }
 
         public override Persona crearPersona(Persona persona, Current current)
@@ -56,12 +68,24 @@ namespace Fivet.ZeroIce
 
         public override Control crearControl(int numFicha, Control control, Current current)
         {
-            throw new System.NotImplementedException();
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                FivetContext fc = scope.ServiceProvider.GetService<FivetContext>();
+                fc.Controles.Add(control);
+                fc.SaveChanges();
+                return control;
+            }
         }
 
         public override Persona obtenerPersona(string rut, Current current)
         {
-            throw new System.NotImplementedException();
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                FivetContext fc = scope.ServiceProvider.GetService<FivetContext>();
+                Persona persona = fc.Personas.Find(rut);
+                fc.SaveChanges();
+                return persona;
+            }
         }
         
     }
