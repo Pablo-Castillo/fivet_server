@@ -38,26 +38,117 @@ namespace Fivet.ZeroIce
         {
             #region Slice data members
 
+            private int _uid;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public int id;
+            public virtual int uid
+            {
+                get
+                {
+                    return _uid;
+                }
+                set
+                {
+                    _uid = value;
+                }
+            }
 
+            private string _nombre;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string nombre;
+            public virtual string nombre
+            {
+                get
+                {
+                    return _nombre;
+                }
+                set
+                {
+                    _nombre = value;
+                }
+            }
 
+            private string _apellido;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string rut;
+            public virtual string apellido
+            {
+                get
+                {
+                    return _apellido;
+                }
+                set
+                {
+                    _apellido = value;
+                }
+            }
 
+            private string _rut;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string direccion;
+            public virtual string rut
+            {
+                get
+                {
+                    return _rut;
+                }
+                set
+                {
+                    _rut = value;
+                }
+            }
 
+            private string _direccion;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public long telefonoFijo;
+            public virtual string direccion
+            {
+                get
+                {
+                    return _direccion;
+                }
+                set
+                {
+                    _direccion = value;
+                }
+            }
 
+            private long _telefonoFijo;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public long celular;
+            public virtual long telefonoFijo
+            {
+                get
+                {
+                    return _telefonoFijo;
+                }
+                set
+                {
+                    _telefonoFijo = value;
+                }
+            }
 
+            private long _celular;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string email;
+            public virtual long celular
+            {
+                get
+                {
+                    return _celular;
+                }
+                set
+                {
+                    _celular = value;
+                }
+            }
+
+            private string _email;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+            public virtual string email
+            {
+                get
+                {
+                    return _email;
+                }
+                set
+                {
+                    _email = value;
+                }
+            }
 
             #endregion
 
@@ -69,6 +160,7 @@ namespace Fivet.ZeroIce
             public Persona()
             {
                 this.nombre = "";
+                this.apellido = "";
                 this.rut = "";
                 this.direccion = "";
                 this.email = "";
@@ -76,15 +168,16 @@ namespace Fivet.ZeroIce
             }
 
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public Persona(int id, string nombre, string rut, string direccion, long telefonoFijo, long celular, string email)
+            public Persona(int uid, string nombre, string apellido, string rut, string direccion, long telefonoFijo, long celular, string email)
             {
-                this.id = id;
-                this.nombre = nombre;
-                this.rut = rut;
-                this.direccion = direccion;
-                this.telefonoFijo = telefonoFijo;
-                this.celular = celular;
-                this.email = email;
+                this._uid = uid;
+                this._nombre = nombre;
+                this._apellido = apellido;
+                this._rut = rut;
+                this._direccion = direccion;
+                this._telefonoFijo = telefonoFijo;
+                this._celular = celular;
+                this._email = email;
                 ice_initialize();
             }
 
@@ -107,13 +200,14 @@ namespace Fivet.ZeroIce
             protected override void iceWriteImpl(global::Ice.OutputStream ostr_)
             {
                 ostr_.startSlice(ice_staticId(), -1, true);
-                ostr_.writeInt(id);
-                ostr_.writeString(nombre);
-                ostr_.writeString(rut);
-                ostr_.writeString(direccion);
-                ostr_.writeLong(telefonoFijo);
-                ostr_.writeLong(celular);
-                ostr_.writeString(email);
+                ostr_.writeInt(_uid);
+                ostr_.writeString(_nombre);
+                ostr_.writeString(_apellido);
+                ostr_.writeString(_rut);
+                ostr_.writeString(_direccion);
+                ostr_.writeLong(_telefonoFijo);
+                ostr_.writeLong(_celular);
+                ostr_.writeString(_email);
                 ostr_.endSlice();
             }
 
@@ -121,13 +215,14 @@ namespace Fivet.ZeroIce
             protected override void iceReadImpl(global::Ice.InputStream istr_)
             {
                 istr_.startSlice();
-                id = istr_.readInt();
-                nombre = istr_.readString();
-                rut = istr_.readString();
-                direccion = istr_.readString();
-                telefonoFijo = istr_.readLong();
-                celular = istr_.readLong();
-                email = istr_.readString();
+                _uid = istr_.readInt();
+                _nombre = istr_.readString();
+                _apellido = istr_.readString();
+                _rut = istr_.readString();
+                _direccion = istr_.readString();
+                _telefonoFijo = istr_.readLong();
+                _celular = istr_.readLong();
+                _email = istr_.readString();
                 istr_.endSlice();
             }
 
@@ -198,32 +293,131 @@ namespace Fivet.ZeroIce
         {
             #region Slice data members
 
+            private int _uid;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public int id;
+            public virtual int uid
+            {
+                get
+                {
+                    return _uid;
+                }
+                set
+                {
+                    _uid = value;
+                }
+            }
 
+            private int _nFicha;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public int nFicha;
+            public virtual int nFicha
+            {
+                get
+                {
+                    return _nFicha;
+                }
+                set
+                {
+                    _nFicha = value;
+                }
+            }
 
+            private string _nombPaciente;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string nombPaciente;
+            public virtual string nombPaciente
+            {
+                get
+                {
+                    return _nombPaciente;
+                }
+                set
+                {
+                    _nombPaciente = value;
+                }
+            }
 
+            private string _especie;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string especie;
+            public virtual string especie
+            {
+                get
+                {
+                    return _especie;
+                }
+                set
+                {
+                    _especie = value;
+                }
+            }
 
+            private string _nacimiento;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string nacimiento;
+            public virtual string nacimiento
+            {
+                get
+                {
+                    return _nacimiento;
+                }
+                set
+                {
+                    _nacimiento = value;
+                }
+            }
 
+            private string _raza;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string raza;
+            public virtual string raza
+            {
+                get
+                {
+                    return _raza;
+                }
+                set
+                {
+                    _raza = value;
+                }
+            }
 
+            private Sexo _sexo;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string sexo;
+            public virtual Sexo sexo
+            {
+                get
+                {
+                    return _sexo;
+                }
+                set
+                {
+                    _sexo = value;
+                }
+            }
 
+            private string _color;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string color;
+            public virtual string color
+            {
+                get
+                {
+                    return _color;
+                }
+                set
+                {
+                    _color = value;
+                }
+            }
 
+            private tipoPaciente _tipoPaciente;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string tipoPaciente;
+            public virtual tipoPaciente tipoPaciente
+            {
+                get
+                {
+                    return _tipoPaciente;
+                }
+                set
+                {
+                    _tipoPaciente = value;
+                }
+            }
 
             #endregion
 
@@ -238,24 +432,22 @@ namespace Fivet.ZeroIce
                 this.especie = "";
                 this.nacimiento = "";
                 this.raza = "";
-                this.sexo = "";
                 this.color = "";
-                this.tipoPaciente = "";
                 ice_initialize();
             }
 
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public Ficha(int id, int nFicha, string nombPaciente, string especie, string nacimiento, string raza, string sexo, string color, string tipoPaciente)
+            public Ficha(int uid, int nFicha, string nombPaciente, string especie, string nacimiento, string raza, Sexo sexo, string color, tipoPaciente tipoPaciente)
             {
-                this.id = id;
-                this.nFicha = nFicha;
-                this.nombPaciente = nombPaciente;
-                this.especie = especie;
-                this.nacimiento = nacimiento;
-                this.raza = raza;
-                this.sexo = sexo;
-                this.color = color;
-                this.tipoPaciente = tipoPaciente;
+                this._uid = uid;
+                this._nFicha = nFicha;
+                this._nombPaciente = nombPaciente;
+                this._especie = especie;
+                this._nacimiento = nacimiento;
+                this._raza = raza;
+                this._sexo = sexo;
+                this._color = color;
+                this._tipoPaciente = tipoPaciente;
                 ice_initialize();
             }
 
@@ -278,15 +470,15 @@ namespace Fivet.ZeroIce
             protected override void iceWriteImpl(global::Ice.OutputStream ostr_)
             {
                 ostr_.startSlice(ice_staticId(), -1, true);
-                ostr_.writeInt(id);
-                ostr_.writeInt(nFicha);
-                ostr_.writeString(nombPaciente);
-                ostr_.writeString(especie);
-                ostr_.writeString(nacimiento);
-                ostr_.writeString(raza);
-                ostr_.writeString(sexo);
-                ostr_.writeString(color);
-                ostr_.writeString(tipoPaciente);
+                ostr_.writeInt(_uid);
+                ostr_.writeInt(_nFicha);
+                ostr_.writeString(_nombPaciente);
+                ostr_.writeString(_especie);
+                ostr_.writeString(_nacimiento);
+                ostr_.writeString(_raza);
+                ostr_.writeEnum((int)_sexo, 1);
+                ostr_.writeString(_color);
+                ostr_.writeEnum((int)_tipoPaciente, 1);
                 ostr_.endSlice();
             }
 
@@ -294,15 +486,15 @@ namespace Fivet.ZeroIce
             protected override void iceReadImpl(global::Ice.InputStream istr_)
             {
                 istr_.startSlice();
-                id = istr_.readInt();
-                nFicha = istr_.readInt();
-                nombPaciente = istr_.readString();
-                especie = istr_.readString();
-                nacimiento = istr_.readString();
-                raza = istr_.readString();
-                sexo = istr_.readString();
-                color = istr_.readString();
-                tipoPaciente = istr_.readString();
+                _uid = istr_.readInt();
+                _nFicha = istr_.readInt();
+                _nombPaciente = istr_.readString();
+                _especie = istr_.readString();
+                _nacimiento = istr_.readString();
+                _raza = istr_.readString();
+                _sexo = (Sexo)istr_.readEnum(1);
+                _color = istr_.readString();
+                _tipoPaciente = (tipoPaciente)istr_.readEnum(1);
                 istr_.endSlice();
             }
 
@@ -325,29 +517,117 @@ namespace Fivet.ZeroIce
         {
             #region Slice data members
 
+            private int _uid;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public int id;
+            public virtual int uid
+            {
+                get
+                {
+                    return _uid;
+                }
+                set
+                {
+                    _uid = value;
+                }
+            }
 
+            private string _fecha;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string fecha;
+            public virtual string fecha
+            {
+                get
+                {
+                    return _fecha;
+                }
+                set
+                {
+                    _fecha = value;
+                }
+            }
 
+            private string _proxControl;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string proxControl;
+            public virtual string proxControl
+            {
+                get
+                {
+                    return _proxControl;
+                }
+                set
+                {
+                    _proxControl = value;
+                }
+            }
 
+            private int _temperatura;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public int temperatura;
+            public virtual int temperatura
+            {
+                get
+                {
+                    return _temperatura;
+                }
+                set
+                {
+                    _temperatura = value;
+                }
+            }
 
+            private double _peso;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public double peso;
+            public virtual double peso
+            {
+                get
+                {
+                    return _peso;
+                }
+                set
+                {
+                    _peso = value;
+                }
+            }
 
+            private double _altura;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public double altura;
+            public virtual double altura
+            {
+                get
+                {
+                    return _altura;
+                }
+                set
+                {
+                    _altura = value;
+                }
+            }
 
+            private string _diagnostico;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string diagnostico;
+            public virtual string diagnostico
+            {
+                get
+                {
+                    return _diagnostico;
+                }
+                set
+                {
+                    _diagnostico = value;
+                }
+            }
 
+            private string _veterinario;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string veterinario;
+            public virtual string veterinario
+            {
+                get
+                {
+                    return _veterinario;
+                }
+                set
+                {
+                    _veterinario = value;
+                }
+            }
 
             #endregion
 
@@ -366,16 +646,16 @@ namespace Fivet.ZeroIce
             }
 
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public Control(int id, string fecha, string proxControl, int temperatura, double peso, double altura, string diagnostico, string veterinario)
+            public Control(int uid, string fecha, string proxControl, int temperatura, double peso, double altura, string diagnostico, string veterinario)
             {
-                this.id = id;
-                this.fecha = fecha;
-                this.proxControl = proxControl;
-                this.temperatura = temperatura;
-                this.peso = peso;
-                this.altura = altura;
-                this.diagnostico = diagnostico;
-                this.veterinario = veterinario;
+                this._uid = uid;
+                this._fecha = fecha;
+                this._proxControl = proxControl;
+                this._temperatura = temperatura;
+                this._peso = peso;
+                this._altura = altura;
+                this._diagnostico = diagnostico;
+                this._veterinario = veterinario;
                 ice_initialize();
             }
 
@@ -398,14 +678,14 @@ namespace Fivet.ZeroIce
             protected override void iceWriteImpl(global::Ice.OutputStream ostr_)
             {
                 ostr_.startSlice(ice_staticId(), -1, true);
-                ostr_.writeInt(id);
-                ostr_.writeString(fecha);
-                ostr_.writeString(proxControl);
-                ostr_.writeInt(temperatura);
-                ostr_.writeDouble(peso);
-                ostr_.writeDouble(altura);
-                ostr_.writeString(diagnostico);
-                ostr_.writeString(veterinario);
+                ostr_.writeInt(_uid);
+                ostr_.writeString(_fecha);
+                ostr_.writeString(_proxControl);
+                ostr_.writeInt(_temperatura);
+                ostr_.writeDouble(_peso);
+                ostr_.writeDouble(_altura);
+                ostr_.writeString(_diagnostico);
+                ostr_.writeString(_veterinario);
                 ostr_.endSlice();
             }
 
@@ -413,14 +693,14 @@ namespace Fivet.ZeroIce
             protected override void iceReadImpl(global::Ice.InputStream istr_)
             {
                 istr_.startSlice();
-                id = istr_.readInt();
-                fecha = istr_.readString();
-                proxControl = istr_.readString();
-                temperatura = istr_.readInt();
-                peso = istr_.readDouble();
-                altura = istr_.readDouble();
-                diagnostico = istr_.readString();
-                veterinario = istr_.readString();
+                _uid = istr_.readInt();
+                _fecha = istr_.readString();
+                _proxControl = istr_.readString();
+                _temperatura = istr_.readInt();
+                _peso = istr_.readDouble();
+                _altura = istr_.readDouble();
+                _diagnostico = istr_.readString();
+                _veterinario = istr_.readString();
                 istr_.endSlice();
             }
 
@@ -443,14 +723,47 @@ namespace Fivet.ZeroIce
         {
             #region Slice data members
 
+            private int _uid;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public int id;
+            public virtual int uid
+            {
+                get
+                {
+                    return _uid;
+                }
+                set
+                {
+                    _uid = value;
+                }
+            }
 
+            private string _nomExamen;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string nomExamen;
+            public virtual string nomExamen
+            {
+                get
+                {
+                    return _nomExamen;
+                }
+                set
+                {
+                    _nomExamen = value;
+                }
+            }
 
+            private string _feExamen;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string feExamen;
+            public virtual string feExamen
+            {
+                get
+                {
+                    return _feExamen;
+                }
+                set
+                {
+                    _feExamen = value;
+                }
+            }
 
             #endregion
 
@@ -467,11 +780,11 @@ namespace Fivet.ZeroIce
             }
 
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public Examen(int id, string nomExamen, string feExamen)
+            public Examen(int uid, string nomExamen, string feExamen)
             {
-                this.id = id;
-                this.nomExamen = nomExamen;
-                this.feExamen = feExamen;
+                this._uid = uid;
+                this._nomExamen = nomExamen;
+                this._feExamen = feExamen;
                 ice_initialize();
             }
 
@@ -494,9 +807,9 @@ namespace Fivet.ZeroIce
             protected override void iceWriteImpl(global::Ice.OutputStream ostr_)
             {
                 ostr_.startSlice(ice_staticId(), -1, true);
-                ostr_.writeInt(id);
-                ostr_.writeString(nomExamen);
-                ostr_.writeString(feExamen);
+                ostr_.writeInt(_uid);
+                ostr_.writeString(_nomExamen);
+                ostr_.writeString(_feExamen);
                 ostr_.endSlice();
             }
 
@@ -504,9 +817,9 @@ namespace Fivet.ZeroIce
             protected override void iceReadImpl(global::Ice.InputStream istr_)
             {
                 istr_.startSlice();
-                id = istr_.readInt();
-                nomExamen = istr_.readString();
-                feExamen = istr_.readString();
+                _uid = istr_.readInt();
+                _nomExamen = istr_.readString();
+                _feExamen = istr_.readString();
                 istr_.endSlice();
             }
 
@@ -529,8 +842,19 @@ namespace Fivet.ZeroIce
         {
             #region Slice data members
 
+            private string _foto;
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            public string foto;
+            public virtual string foto
+            {
+                get
+                {
+                    return _foto;
+                }
+                set
+                {
+                    _foto = value;
+                }
+            }
 
             #endregion
 
@@ -548,7 +872,7 @@ namespace Fivet.ZeroIce
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
             public Foto(string foto)
             {
-                this.foto = foto;
+                this._foto = foto;
                 ice_initialize();
             }
 
@@ -571,7 +895,7 @@ namespace Fivet.ZeroIce
             protected override void iceWriteImpl(global::Ice.OutputStream ostr_)
             {
                 ostr_.startSlice(ice_staticId(), -1, true);
-                ostr_.writeString(foto);
+                ostr_.writeString(_foto);
                 ostr_.endSlice();
             }
 
@@ -579,7 +903,7 @@ namespace Fivet.ZeroIce
             protected override void iceReadImpl(global::Ice.InputStream istr_)
             {
                 istr_.startSlice();
-                foto = istr_.readString();
+                _foto = istr_.readString();
                 istr_.endSlice();
             }
 
@@ -656,13 +980,19 @@ namespace Fivet.ZeroIce
     namespace model
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+        public delegate void Callback_Contratos_crearFicha(Ficha ret);
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+        public delegate void Callback_Contratos_crearPersona(Persona ret);
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+        public delegate void Callback_Contratos_crearControl(Control ret);
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
         public delegate void Callback_Contratos_obtenerFicha(Ficha ret);
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-        public delegate void Callback_Contratos_ingresarDuenio(Persona ret);
-
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-        public delegate void Callback_Contratos_ingresarControl(Control ret);
+        public delegate void Callback_Contratos_obtenerPersona(Persona ret);
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
         public delegate void Callback_TheSystem_getDelay(long ret);
@@ -680,167 +1010,65 @@ namespace Fivet.ZeroIce
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
         public interface ContratosPrx : global::Ice.ObjectPrx
         {
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="numero">de la ficha
-            /// </param>
-            /// <returns>Ficha</returns>
-            /// <param name="context">The Context map to send with the invocation.</param>
+            Ficha crearFicha(Ficha ficha, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+
+            global::System.Threading.Tasks.Task<Ficha> crearFichaAsync(Ficha ficha, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
+
+            global::Ice.AsyncResult<Callback_Contratos_crearFicha> begin_crearFicha(Ficha ficha, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+
+            global::Ice.AsyncResult begin_crearFicha(Ficha ficha, global::Ice.AsyncCallback callback, object cookie);
+
+            global::Ice.AsyncResult begin_crearFicha(Ficha ficha, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
+
+            Ficha end_crearFicha(global::Ice.AsyncResult asyncResult);
+
+            Persona crearPersona(Persona persona, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+
+            global::System.Threading.Tasks.Task<Persona> crearPersonaAsync(Persona persona, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
+
+            global::Ice.AsyncResult<Callback_Contratos_crearPersona> begin_crearPersona(Persona persona, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+
+            global::Ice.AsyncResult begin_crearPersona(Persona persona, global::Ice.AsyncCallback callback, object cookie);
+
+            global::Ice.AsyncResult begin_crearPersona(Persona persona, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
+
+            Persona end_crearPersona(global::Ice.AsyncResult asyncResult);
+
+            Control crearControl(int numFicha, Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+
+            global::System.Threading.Tasks.Task<Control> crearControlAsync(int numFicha, Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
+
+            global::Ice.AsyncResult<Callback_Contratos_crearControl> begin_crearControl(int numFicha, Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+
+            global::Ice.AsyncResult begin_crearControl(int numFicha, Control control, global::Ice.AsyncCallback callback, object cookie);
+
+            global::Ice.AsyncResult begin_crearControl(int numFicha, Control control, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
+
+            Control end_crearControl(global::Ice.AsyncResult asyncResult);
 
             Ficha obtenerFicha(int numero, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
 
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="numero">de la ficha
-            /// </param>
-            /// <param name="context">Context map to send with the invocation.</param>
-            /// <param name="progress">Sent progress provider.</param>
-            /// <param name="cancel">A cancellation token that receives the cancellation requests.</param>
-            /// <returns>The task object representing the asynchronous operation.</returns>
             global::System.Threading.Tasks.Task<Ficha> obtenerFichaAsync(int numero, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
 
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="numero">de la ficha
-            /// </param>
-            /// <param name="context">The Context map to send with the invocation.</param>
-            /// <returns>An asynchronous result object.</returns>
             global::Ice.AsyncResult<Callback_Contratos_obtenerFicha> begin_obtenerFicha(int numero, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
 
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="numero">de la ficha
-            /// </param>
-            /// <param name="callback">Asynchronous callback invoked when the operation completes.</param>
-            /// <param name="cookie">Application data to store in the asynchronous result object.</param>
-            /// <returns>An asynchronous result object.</returns>
             global::Ice.AsyncResult begin_obtenerFicha(int numero, global::Ice.AsyncCallback callback, object cookie);
 
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="numero">de la ficha
-            /// </param>
-            /// <param name="context">The Context map to send with the invocation.</param>
-            /// <param name="callback">Asynchronous callback invoked when the operation completes.</param>
-            /// <param name="cookie">Application data to store in the asynchronous result object.</param>
-            /// <returns>An asynchronous result object.</returns>
             global::Ice.AsyncResult begin_obtenerFicha(int numero, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
 
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="asyncResult">The asynchronous result object for the invocation.</param>
-            /// <returns>Ficha</returns>
             Ficha end_obtenerFicha(global::Ice.AsyncResult asyncResult);
 
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="context">The Context map to send with the invocation.</param>
+            Persona obtenerPersona(string rut, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
 
-            Persona ingresarDuenio(Persona duenio, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+            global::System.Threading.Tasks.Task<Persona> obtenerPersonaAsync(string rut, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
 
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="context">Context map to send with the invocation.</param>
-            /// <param name="progress">Sent progress provider.</param>
-            /// <param name="cancel">A cancellation token that receives the cancellation requests.</param>
-            /// <returns>The task object representing the asynchronous operation.</returns>
-            global::System.Threading.Tasks.Task<Persona> ingresarDuenioAsync(Persona duenio, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
+            global::Ice.AsyncResult<Callback_Contratos_obtenerPersona> begin_obtenerPersona(string rut, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
 
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="context">The Context map to send with the invocation.</param>
-            /// <returns>An asynchronous result object.</returns>
-            global::Ice.AsyncResult<Callback_Contratos_ingresarDuenio> begin_ingresarDuenio(Persona duenio, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
+            global::Ice.AsyncResult begin_obtenerPersona(string rut, global::Ice.AsyncCallback callback, object cookie);
 
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="callback">Asynchronous callback invoked when the operation completes.</param>
-            /// <param name="cookie">Application data to store in the asynchronous result object.</param>
-            /// <returns>An asynchronous result object.</returns>
-            global::Ice.AsyncResult begin_ingresarDuenio(Persona duenio, global::Ice.AsyncCallback callback, object cookie);
+            global::Ice.AsyncResult begin_obtenerPersona(string rut, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
 
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="context">The Context map to send with the invocation.</param>
-            /// <param name="callback">Asynchronous callback invoked when the operation completes.</param>
-            /// <param name="cookie">Application data to store in the asynchronous result object.</param>
-            /// <returns>An asynchronous result object.</returns>
-            global::Ice.AsyncResult begin_ingresarDuenio(Persona duenio, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
-
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="asyncResult">The asynchronous result object for the invocation.</param>
-            Persona end_ingresarDuenio(global::Ice.AsyncResult asyncResult);
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="context">The Context map to send with the invocation.</param>
-
-            Control ingresarControl(Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="context">Context map to send with the invocation.</param>
-            /// <param name="progress">Sent progress provider.</param>
-            /// <param name="cancel">A cancellation token that receives the cancellation requests.</param>
-            /// <returns>The task object representing the asynchronous operation.</returns>
-            global::System.Threading.Tasks.Task<Control> ingresarControlAsync(Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken());
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="context">The Context map to send with the invocation.</param>
-            /// <returns>An asynchronous result object.</returns>
-            global::Ice.AsyncResult<Callback_Contratos_ingresarControl> begin_ingresarControl(Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext());
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="callback">Asynchronous callback invoked when the operation completes.</param>
-            /// <param name="cookie">Application data to store in the asynchronous result object.</param>
-            /// <returns>An asynchronous result object.</returns>
-            global::Ice.AsyncResult begin_ingresarControl(Control control, global::Ice.AsyncCallback callback, object cookie);
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="context">The Context map to send with the invocation.</param>
-            /// <param name="callback">Asynchronous callback invoked when the operation completes.</param>
-            /// <param name="cookie">Application data to store in the asynchronous result object.</param>
-            /// <returns>An asynchronous result object.</returns>
-            global::Ice.AsyncResult begin_ingresarControl(Control control, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie);
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="asyncResult">The asynchronous result object for the invocation.</param>
-            Control end_ingresarControl(global::Ice.AsyncResult asyncResult);
+            Persona end_obtenerPersona(global::Ice.AsyncResult asyncResult);
         }
 
         /// <summary>
@@ -876,34 +1104,20 @@ namespace Fivet.ZeroIce
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
         public interface ContratosOperations_
         {
-            /// <summary>
-            /// Dado un numero de ficha, retorna una ficha
-            /// </summary>
-            /// <param name="numero">de la ficha
-            /// </param>
-            /// <returns>Ficha</returns>
-            /// <param name="current">The Current object for the invocation.</param>
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+            Ficha crearFicha(Ficha ficha, global::Ice.Current current = null);
+
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+            Persona crearPersona(Persona persona, global::Ice.Current current = null);
+
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
+            Control crearControl(int numFicha, Control control, global::Ice.Current current = null);
 
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
             Ficha obtenerFicha(int numero, global::Ice.Current current = null);
 
-            /// <summary>
-            /// Se ingresa un dueño al sistema
-            /// duenio
-            /// </summary>
-            /// <param name="current">The Current object for the invocation.</param>
-
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            Persona ingresarDuenio(Persona duenio, global::Ice.Current current = null);
-
-            /// <summary>
-            /// Se agrega un control al sistema
-            /// control
-            /// </summary>
-            /// <param name="current">The Current object for the invocation.</param>
-
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.7.3")]
-            Control ingresarControl(Control control, global::Ice.Current current = null);
+            Persona obtenerPersona(string rut, global::Ice.Current current = null);
         }
 
         /// <summary>
@@ -938,6 +1152,42 @@ namespace Fivet.ZeroIce
 
             #region Synchronous operations
 
+            public Ficha crearFicha(Ficha ficha, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            {
+                try
+                {
+                    return _iceI_crearFichaAsync(ficha, context, null, global::System.Threading.CancellationToken.None, true).Result;
+                }
+                catch(global::System.AggregateException ex_)
+                {
+                    throw ex_.InnerException;
+                }
+            }
+
+            public Persona crearPersona(Persona persona, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            {
+                try
+                {
+                    return _iceI_crearPersonaAsync(persona, context, null, global::System.Threading.CancellationToken.None, true).Result;
+                }
+                catch(global::System.AggregateException ex_)
+                {
+                    throw ex_.InnerException;
+                }
+            }
+
+            public Control crearControl(int numFicha, Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            {
+                try
+                {
+                    return _iceI_crearControlAsync(numFicha, control, context, null, global::System.Threading.CancellationToken.None, true).Result;
+                }
+                catch(global::System.AggregateException ex_)
+                {
+                    throw ex_.InnerException;
+                }
+            }
+
             public Ficha obtenerFicha(int numero, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
             {
                 try
@@ -950,23 +1200,11 @@ namespace Fivet.ZeroIce
                 }
             }
 
-            public Persona ingresarDuenio(Persona duenio, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            public Persona obtenerPersona(string rut, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
             {
                 try
                 {
-                    return _iceI_ingresarDuenioAsync(duenio, context, null, global::System.Threading.CancellationToken.None, true).Result;
-                }
-                catch(global::System.AggregateException ex_)
-                {
-                    throw ex_.InnerException;
-                }
-            }
-
-            public Control ingresarControl(Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
-            {
-                try
-                {
-                    return _iceI_ingresarControlAsync(control, context, null, global::System.Threading.CancellationToken.None, true).Result;
+                    return _iceI_obtenerPersonaAsync(rut, context, null, global::System.Threading.CancellationToken.None, true).Result;
                 }
                 catch(global::System.AggregateException ex_)
                 {
@@ -977,6 +1215,121 @@ namespace Fivet.ZeroIce
             #endregion
 
             #region Async Task operations
+
+            public global::System.Threading.Tasks.Task<Ficha> crearFichaAsync(Ficha ficha, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
+            {
+                return _iceI_crearFichaAsync(ficha, context, progress, cancel, false);
+            }
+
+            private global::System.Threading.Tasks.Task<Ficha> _iceI_crearFichaAsync(Ficha iceP_ficha, global::Ice.OptionalContext context, global::System.IProgress<bool> progress, global::System.Threading.CancellationToken cancel, bool synchronous)
+            {
+                iceCheckTwowayOnly(_crearFicha_name);
+                var completed = new global::IceInternal.OperationTaskCompletionCallback<Ficha>(progress, cancel);
+                _iceI_crearFicha(iceP_ficha, context, synchronous, completed);
+                return completed.Task;
+            }
+
+            private const string _crearFicha_name = "crearFicha";
+
+            private void _iceI_crearFicha(Ficha iceP_ficha, global::System.Collections.Generic.Dictionary<string, string> context, bool synchronous, global::IceInternal.OutgoingAsyncCompletionCallback completed)
+            {
+                var outAsync = getOutgoingAsync<Ficha>(completed);
+                outAsync.invoke(
+                    _crearFicha_name,
+                    global::Ice.OperationMode.Normal,
+                    global::Ice.FormatType.DefaultFormat,
+                    context,
+                    synchronous,
+                    write: (global::Ice.OutputStream ostr) =>
+                    {
+                        ostr.writeValue(iceP_ficha);
+                        ostr.writePendingValues();
+                    },
+                    read: (global::Ice.InputStream istr) =>
+                    {
+                        Ficha ret = null;
+                        istr.readValue((Ficha v) => {ret = v; });
+                        istr.readPendingValues();
+                        return ret;
+                    });
+            }
+
+            public global::System.Threading.Tasks.Task<Persona> crearPersonaAsync(Persona persona, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
+            {
+                return _iceI_crearPersonaAsync(persona, context, progress, cancel, false);
+            }
+
+            private global::System.Threading.Tasks.Task<Persona> _iceI_crearPersonaAsync(Persona iceP_persona, global::Ice.OptionalContext context, global::System.IProgress<bool> progress, global::System.Threading.CancellationToken cancel, bool synchronous)
+            {
+                iceCheckTwowayOnly(_crearPersona_name);
+                var completed = new global::IceInternal.OperationTaskCompletionCallback<Persona>(progress, cancel);
+                _iceI_crearPersona(iceP_persona, context, synchronous, completed);
+                return completed.Task;
+            }
+
+            private const string _crearPersona_name = "crearPersona";
+
+            private void _iceI_crearPersona(Persona iceP_persona, global::System.Collections.Generic.Dictionary<string, string> context, bool synchronous, global::IceInternal.OutgoingAsyncCompletionCallback completed)
+            {
+                var outAsync = getOutgoingAsync<Persona>(completed);
+                outAsync.invoke(
+                    _crearPersona_name,
+                    global::Ice.OperationMode.Normal,
+                    global::Ice.FormatType.DefaultFormat,
+                    context,
+                    synchronous,
+                    write: (global::Ice.OutputStream ostr) =>
+                    {
+                        ostr.writeValue(iceP_persona);
+                        ostr.writePendingValues();
+                    },
+                    read: (global::Ice.InputStream istr) =>
+                    {
+                        Persona ret = null;
+                        istr.readValue((Persona v) => {ret = v; });
+                        istr.readPendingValues();
+                        return ret;
+                    });
+            }
+
+            public global::System.Threading.Tasks.Task<Control> crearControlAsync(int numFicha, Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
+            {
+                return _iceI_crearControlAsync(numFicha, control, context, progress, cancel, false);
+            }
+
+            private global::System.Threading.Tasks.Task<Control> _iceI_crearControlAsync(int iceP_numFicha, Control iceP_control, global::Ice.OptionalContext context, global::System.IProgress<bool> progress, global::System.Threading.CancellationToken cancel, bool synchronous)
+            {
+                iceCheckTwowayOnly(_crearControl_name);
+                var completed = new global::IceInternal.OperationTaskCompletionCallback<Control>(progress, cancel);
+                _iceI_crearControl(iceP_numFicha, iceP_control, context, synchronous, completed);
+                return completed.Task;
+            }
+
+            private const string _crearControl_name = "crearControl";
+
+            private void _iceI_crearControl(int iceP_numFicha, Control iceP_control, global::System.Collections.Generic.Dictionary<string, string> context, bool synchronous, global::IceInternal.OutgoingAsyncCompletionCallback completed)
+            {
+                var outAsync = getOutgoingAsync<Control>(completed);
+                outAsync.invoke(
+                    _crearControl_name,
+                    global::Ice.OperationMode.Normal,
+                    global::Ice.FormatType.DefaultFormat,
+                    context,
+                    synchronous,
+                    write: (global::Ice.OutputStream ostr) =>
+                    {
+                        ostr.writeInt(iceP_numFicha);
+                        ostr.writeValue(iceP_control);
+                        ostr.writePendingValues();
+                    },
+                    read: (global::Ice.InputStream istr) =>
+                    {
+                        Control ret = null;
+                        istr.readValue((Control v) => {ret = v; });
+                        istr.readPendingValues();
+                        return ret;
+                    });
+            }
 
             public global::System.Threading.Tasks.Task<Ficha> obtenerFichaAsync(int numero, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
             {
@@ -1015,34 +1368,33 @@ namespace Fivet.ZeroIce
                     });
             }
 
-            public global::System.Threading.Tasks.Task<Persona> ingresarDuenioAsync(Persona duenio, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
+            public global::System.Threading.Tasks.Task<Persona> obtenerPersonaAsync(string rut, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
             {
-                return _iceI_ingresarDuenioAsync(duenio, context, progress, cancel, false);
+                return _iceI_obtenerPersonaAsync(rut, context, progress, cancel, false);
             }
 
-            private global::System.Threading.Tasks.Task<Persona> _iceI_ingresarDuenioAsync(Persona iceP_duenio, global::Ice.OptionalContext context, global::System.IProgress<bool> progress, global::System.Threading.CancellationToken cancel, bool synchronous)
+            private global::System.Threading.Tasks.Task<Persona> _iceI_obtenerPersonaAsync(string iceP_rut, global::Ice.OptionalContext context, global::System.IProgress<bool> progress, global::System.Threading.CancellationToken cancel, bool synchronous)
             {
-                iceCheckTwowayOnly(_ingresarDuenio_name);
+                iceCheckTwowayOnly(_obtenerPersona_name);
                 var completed = new global::IceInternal.OperationTaskCompletionCallback<Persona>(progress, cancel);
-                _iceI_ingresarDuenio(iceP_duenio, context, synchronous, completed);
+                _iceI_obtenerPersona(iceP_rut, context, synchronous, completed);
                 return completed.Task;
             }
 
-            private const string _ingresarDuenio_name = "ingresarDuenio";
+            private const string _obtenerPersona_name = "obtenerPersona";
 
-            private void _iceI_ingresarDuenio(Persona iceP_duenio, global::System.Collections.Generic.Dictionary<string, string> context, bool synchronous, global::IceInternal.OutgoingAsyncCompletionCallback completed)
+            private void _iceI_obtenerPersona(string iceP_rut, global::System.Collections.Generic.Dictionary<string, string> context, bool synchronous, global::IceInternal.OutgoingAsyncCompletionCallback completed)
             {
                 var outAsync = getOutgoingAsync<Persona>(completed);
                 outAsync.invoke(
-                    _ingresarDuenio_name,
+                    _obtenerPersona_name,
                     global::Ice.OperationMode.Normal,
                     global::Ice.FormatType.DefaultFormat,
                     context,
                     synchronous,
                     write: (global::Ice.OutputStream ostr) =>
                     {
-                        ostr.writeValue(iceP_duenio);
-                        ostr.writePendingValues();
+                        ostr.writeString(iceP_rut);
                     },
                     read: (global::Ice.InputStream istr) =>
                     {
@@ -1053,47 +1405,123 @@ namespace Fivet.ZeroIce
                     });
             }
 
-            public global::System.Threading.Tasks.Task<Control> ingresarControlAsync(Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext(), global::System.IProgress<bool> progress = null, global::System.Threading.CancellationToken cancel = new global::System.Threading.CancellationToken())
-            {
-                return _iceI_ingresarControlAsync(control, context, progress, cancel, false);
-            }
-
-            private global::System.Threading.Tasks.Task<Control> _iceI_ingresarControlAsync(Control iceP_control, global::Ice.OptionalContext context, global::System.IProgress<bool> progress, global::System.Threading.CancellationToken cancel, bool synchronous)
-            {
-                iceCheckTwowayOnly(_ingresarControl_name);
-                var completed = new global::IceInternal.OperationTaskCompletionCallback<Control>(progress, cancel);
-                _iceI_ingresarControl(iceP_control, context, synchronous, completed);
-                return completed.Task;
-            }
-
-            private const string _ingresarControl_name = "ingresarControl";
-
-            private void _iceI_ingresarControl(Control iceP_control, global::System.Collections.Generic.Dictionary<string, string> context, bool synchronous, global::IceInternal.OutgoingAsyncCompletionCallback completed)
-            {
-                var outAsync = getOutgoingAsync<Control>(completed);
-                outAsync.invoke(
-                    _ingresarControl_name,
-                    global::Ice.OperationMode.Normal,
-                    global::Ice.FormatType.DefaultFormat,
-                    context,
-                    synchronous,
-                    write: (global::Ice.OutputStream ostr) =>
-                    {
-                        ostr.writeValue(iceP_control);
-                        ostr.writePendingValues();
-                    },
-                    read: (global::Ice.InputStream istr) =>
-                    {
-                        Control ret = null;
-                        istr.readValue((Control v) => {ret = v; });
-                        istr.readPendingValues();
-                        return ret;
-                    });
-            }
-
             #endregion
 
             #region Asynchronous operations
+
+            public global::Ice.AsyncResult<Callback_Contratos_crearFicha> begin_crearFicha(Ficha ficha, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            {
+                return begin_crearFicha(ficha, context, null, null, false);
+            }
+
+            public global::Ice.AsyncResult begin_crearFicha(Ficha ficha, global::Ice.AsyncCallback callback, object cookie)
+            {
+                return begin_crearFicha(ficha, new global::Ice.OptionalContext(), callback, cookie, false);
+            }
+
+            public global::Ice.AsyncResult begin_crearFicha(Ficha ficha, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie)
+            {
+                return begin_crearFicha(ficha, context, callback, cookie, false);
+            }
+
+            public Ficha end_crearFicha(global::Ice.AsyncResult asyncResult)
+            {
+                var resultI_ = global::IceInternal.AsyncResultI.check(asyncResult, this, _crearFicha_name);
+                var outgoing_ = (global::IceInternal.OutgoingAsyncT<Ficha>)resultI_.OutgoingAsync;
+                return outgoing_.getResult(resultI_.wait());
+            }
+
+            private global::Ice.AsyncResult<Callback_Contratos_crearFicha> begin_crearFicha(Ficha iceP_ficha, global::System.Collections.Generic.Dictionary<string, string> context, global::Ice.AsyncCallback completedCallback, object cookie, bool synchronous)
+            {
+                iceCheckAsyncTwowayOnly(_crearFicha_name);
+                var completed = new global::IceInternal.OperationAsyncResultCompletionCallback<Callback_Contratos_crearFicha, Ficha>(
+                    (Callback_Contratos_crearFicha cb, Ficha ret) =>
+                    {
+                        if(cb != null)
+                        {
+                            cb.Invoke(ret);
+                        }
+                    },
+                    this, _crearFicha_name, cookie, completedCallback);
+                _iceI_crearFicha(iceP_ficha, context, synchronous, completed);
+                return completed;
+            }
+
+            public global::Ice.AsyncResult<Callback_Contratos_crearPersona> begin_crearPersona(Persona persona, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            {
+                return begin_crearPersona(persona, context, null, null, false);
+            }
+
+            public global::Ice.AsyncResult begin_crearPersona(Persona persona, global::Ice.AsyncCallback callback, object cookie)
+            {
+                return begin_crearPersona(persona, new global::Ice.OptionalContext(), callback, cookie, false);
+            }
+
+            public global::Ice.AsyncResult begin_crearPersona(Persona persona, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie)
+            {
+                return begin_crearPersona(persona, context, callback, cookie, false);
+            }
+
+            public Persona end_crearPersona(global::Ice.AsyncResult asyncResult)
+            {
+                var resultI_ = global::IceInternal.AsyncResultI.check(asyncResult, this, _crearPersona_name);
+                var outgoing_ = (global::IceInternal.OutgoingAsyncT<Persona>)resultI_.OutgoingAsync;
+                return outgoing_.getResult(resultI_.wait());
+            }
+
+            private global::Ice.AsyncResult<Callback_Contratos_crearPersona> begin_crearPersona(Persona iceP_persona, global::System.Collections.Generic.Dictionary<string, string> context, global::Ice.AsyncCallback completedCallback, object cookie, bool synchronous)
+            {
+                iceCheckAsyncTwowayOnly(_crearPersona_name);
+                var completed = new global::IceInternal.OperationAsyncResultCompletionCallback<Callback_Contratos_crearPersona, Persona>(
+                    (Callback_Contratos_crearPersona cb, Persona ret) =>
+                    {
+                        if(cb != null)
+                        {
+                            cb.Invoke(ret);
+                        }
+                    },
+                    this, _crearPersona_name, cookie, completedCallback);
+                _iceI_crearPersona(iceP_persona, context, synchronous, completed);
+                return completed;
+            }
+
+            public global::Ice.AsyncResult<Callback_Contratos_crearControl> begin_crearControl(int numFicha, Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            {
+                return begin_crearControl(numFicha, control, context, null, null, false);
+            }
+
+            public global::Ice.AsyncResult begin_crearControl(int numFicha, Control control, global::Ice.AsyncCallback callback, object cookie)
+            {
+                return begin_crearControl(numFicha, control, new global::Ice.OptionalContext(), callback, cookie, false);
+            }
+
+            public global::Ice.AsyncResult begin_crearControl(int numFicha, Control control, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie)
+            {
+                return begin_crearControl(numFicha, control, context, callback, cookie, false);
+            }
+
+            public Control end_crearControl(global::Ice.AsyncResult asyncResult)
+            {
+                var resultI_ = global::IceInternal.AsyncResultI.check(asyncResult, this, _crearControl_name);
+                var outgoing_ = (global::IceInternal.OutgoingAsyncT<Control>)resultI_.OutgoingAsync;
+                return outgoing_.getResult(resultI_.wait());
+            }
+
+            private global::Ice.AsyncResult<Callback_Contratos_crearControl> begin_crearControl(int iceP_numFicha, Control iceP_control, global::System.Collections.Generic.Dictionary<string, string> context, global::Ice.AsyncCallback completedCallback, object cookie, bool synchronous)
+            {
+                iceCheckAsyncTwowayOnly(_crearControl_name);
+                var completed = new global::IceInternal.OperationAsyncResultCompletionCallback<Callback_Contratos_crearControl, Control>(
+                    (Callback_Contratos_crearControl cb, Control ret) =>
+                    {
+                        if(cb != null)
+                        {
+                            cb.Invoke(ret);
+                        }
+                    },
+                    this, _crearControl_name, cookie, completedCallback);
+                _iceI_crearControl(iceP_numFicha, iceP_control, context, synchronous, completed);
+                return completed;
+            }
 
             public global::Ice.AsyncResult<Callback_Contratos_obtenerFicha> begin_obtenerFicha(int numero, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
             {
@@ -1133,79 +1561,41 @@ namespace Fivet.ZeroIce
                 return completed;
             }
 
-            public global::Ice.AsyncResult<Callback_Contratos_ingresarDuenio> begin_ingresarDuenio(Persona duenio, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
+            public global::Ice.AsyncResult<Callback_Contratos_obtenerPersona> begin_obtenerPersona(string rut, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
             {
-                return begin_ingresarDuenio(duenio, context, null, null, false);
+                return begin_obtenerPersona(rut, context, null, null, false);
             }
 
-            public global::Ice.AsyncResult begin_ingresarDuenio(Persona duenio, global::Ice.AsyncCallback callback, object cookie)
+            public global::Ice.AsyncResult begin_obtenerPersona(string rut, global::Ice.AsyncCallback callback, object cookie)
             {
-                return begin_ingresarDuenio(duenio, new global::Ice.OptionalContext(), callback, cookie, false);
+                return begin_obtenerPersona(rut, new global::Ice.OptionalContext(), callback, cookie, false);
             }
 
-            public global::Ice.AsyncResult begin_ingresarDuenio(Persona duenio, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie)
+            public global::Ice.AsyncResult begin_obtenerPersona(string rut, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie)
             {
-                return begin_ingresarDuenio(duenio, context, callback, cookie, false);
+                return begin_obtenerPersona(rut, context, callback, cookie, false);
             }
 
-            public Persona end_ingresarDuenio(global::Ice.AsyncResult asyncResult)
+            public Persona end_obtenerPersona(global::Ice.AsyncResult asyncResult)
             {
-                var resultI_ = global::IceInternal.AsyncResultI.check(asyncResult, this, _ingresarDuenio_name);
+                var resultI_ = global::IceInternal.AsyncResultI.check(asyncResult, this, _obtenerPersona_name);
                 var outgoing_ = (global::IceInternal.OutgoingAsyncT<Persona>)resultI_.OutgoingAsync;
                 return outgoing_.getResult(resultI_.wait());
             }
 
-            private global::Ice.AsyncResult<Callback_Contratos_ingresarDuenio> begin_ingresarDuenio(Persona iceP_duenio, global::System.Collections.Generic.Dictionary<string, string> context, global::Ice.AsyncCallback completedCallback, object cookie, bool synchronous)
+            private global::Ice.AsyncResult<Callback_Contratos_obtenerPersona> begin_obtenerPersona(string iceP_rut, global::System.Collections.Generic.Dictionary<string, string> context, global::Ice.AsyncCallback completedCallback, object cookie, bool synchronous)
             {
-                iceCheckAsyncTwowayOnly(_ingresarDuenio_name);
-                var completed = new global::IceInternal.OperationAsyncResultCompletionCallback<Callback_Contratos_ingresarDuenio, Persona>(
-                    (Callback_Contratos_ingresarDuenio cb, Persona ret) =>
+                iceCheckAsyncTwowayOnly(_obtenerPersona_name);
+                var completed = new global::IceInternal.OperationAsyncResultCompletionCallback<Callback_Contratos_obtenerPersona, Persona>(
+                    (Callback_Contratos_obtenerPersona cb, Persona ret) =>
                     {
                         if(cb != null)
                         {
                             cb.Invoke(ret);
                         }
                     },
-                    this, _ingresarDuenio_name, cookie, completedCallback);
-                _iceI_ingresarDuenio(iceP_duenio, context, synchronous, completed);
-                return completed;
-            }
-
-            public global::Ice.AsyncResult<Callback_Contratos_ingresarControl> begin_ingresarControl(Control control, global::Ice.OptionalContext context = new global::Ice.OptionalContext())
-            {
-                return begin_ingresarControl(control, context, null, null, false);
-            }
-
-            public global::Ice.AsyncResult begin_ingresarControl(Control control, global::Ice.AsyncCallback callback, object cookie)
-            {
-                return begin_ingresarControl(control, new global::Ice.OptionalContext(), callback, cookie, false);
-            }
-
-            public global::Ice.AsyncResult begin_ingresarControl(Control control, global::Ice.OptionalContext context, global::Ice.AsyncCallback callback, object cookie)
-            {
-                return begin_ingresarControl(control, context, callback, cookie, false);
-            }
-
-            public Control end_ingresarControl(global::Ice.AsyncResult asyncResult)
-            {
-                var resultI_ = global::IceInternal.AsyncResultI.check(asyncResult, this, _ingresarControl_name);
-                var outgoing_ = (global::IceInternal.OutgoingAsyncT<Control>)resultI_.OutgoingAsync;
-                return outgoing_.getResult(resultI_.wait());
-            }
-
-            private global::Ice.AsyncResult<Callback_Contratos_ingresarControl> begin_ingresarControl(Control iceP_control, global::System.Collections.Generic.Dictionary<string, string> context, global::Ice.AsyncCallback completedCallback, object cookie, bool synchronous)
-            {
-                iceCheckAsyncTwowayOnly(_ingresarControl_name);
-                var completed = new global::IceInternal.OperationAsyncResultCompletionCallback<Callback_Contratos_ingresarControl, Control>(
-                    (Callback_Contratos_ingresarControl cb, Control ret) =>
-                    {
-                        if(cb != null)
-                        {
-                            cb.Invoke(ret);
-                        }
-                    },
-                    this, _ingresarControl_name, cookie, completedCallback);
-                _iceI_ingresarControl(iceP_control, context, synchronous, completed);
+                    this, _obtenerPersona_name, cookie, completedCallback);
+                _iceI_obtenerPersona(iceP_rut, context, synchronous, completed);
                 return completed;
             }
 
@@ -1616,11 +2006,15 @@ namespace Fivet.ZeroIce
         {
             #region Slice operations
 
+            public abstract Ficha crearFicha(Ficha ficha, global::Ice.Current current = null);
+
+            public abstract Persona crearPersona(Persona persona, global::Ice.Current current = null);
+
+            public abstract Control crearControl(int numFicha, Control control, global::Ice.Current current = null);
+
             public abstract Ficha obtenerFicha(int numero, global::Ice.Current current = null);
 
-            public abstract Persona ingresarDuenio(Persona duenio, global::Ice.Current current = null);
-
-            public abstract Control ingresarControl(Control control, global::Ice.Current current = null);
+            public abstract Persona obtenerPersona(string rut, global::Ice.Current current = null);
 
             #endregion
 
@@ -1658,6 +2052,65 @@ namespace Fivet.ZeroIce
 
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
             public static global::System.Threading.Tasks.Task<global::Ice.OutputStream>
+            iceD_crearFicha(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
+            {
+                global::Ice.ObjectImpl.iceCheckMode(global::Ice.OperationMode.Normal, current.mode);
+                var istr = inS.startReadParams();
+                Ficha iceP_ficha;
+                iceP_ficha = null;
+                istr.readValue((Ficha v) => {iceP_ficha = v; });
+                istr.readPendingValues();
+                inS.endReadParams();
+                var ret = obj.crearFicha(iceP_ficha, current);
+                var ostr = inS.startWriteParams();
+                ostr.writeValue(ret);
+                ostr.writePendingValues();
+                inS.endWriteParams(ostr);
+                return inS.setResult(ostr);
+            }
+
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+            public static global::System.Threading.Tasks.Task<global::Ice.OutputStream>
+            iceD_crearPersona(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
+            {
+                global::Ice.ObjectImpl.iceCheckMode(global::Ice.OperationMode.Normal, current.mode);
+                var istr = inS.startReadParams();
+                Persona iceP_persona;
+                iceP_persona = null;
+                istr.readValue((Persona v) => {iceP_persona = v; });
+                istr.readPendingValues();
+                inS.endReadParams();
+                var ret = obj.crearPersona(iceP_persona, current);
+                var ostr = inS.startWriteParams();
+                ostr.writeValue(ret);
+                ostr.writePendingValues();
+                inS.endWriteParams(ostr);
+                return inS.setResult(ostr);
+            }
+
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+            public static global::System.Threading.Tasks.Task<global::Ice.OutputStream>
+            iceD_crearControl(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
+            {
+                global::Ice.ObjectImpl.iceCheckMode(global::Ice.OperationMode.Normal, current.mode);
+                var istr = inS.startReadParams();
+                int iceP_numFicha;
+                Control iceP_control;
+                iceP_control = null;
+                iceP_numFicha = istr.readInt();
+                istr.readValue((Control v) => {iceP_control = v; });
+                istr.readPendingValues();
+                inS.endReadParams();
+                var ret = obj.crearControl(iceP_numFicha, iceP_control, current);
+                var ostr = inS.startWriteParams();
+                ostr.writeValue(ret);
+                ostr.writePendingValues();
+                inS.endWriteParams(ostr);
+                return inS.setResult(ostr);
+            }
+
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+            public static global::System.Threading.Tasks.Task<global::Ice.OutputStream>
             iceD_obtenerFicha(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
             {
                 global::Ice.ObjectImpl.iceCheckMode(global::Ice.OperationMode.Normal, current.mode);
@@ -1675,35 +2128,14 @@ namespace Fivet.ZeroIce
 
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
             public static global::System.Threading.Tasks.Task<global::Ice.OutputStream>
-            iceD_ingresarDuenio(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
+            iceD_obtenerPersona(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
             {
                 global::Ice.ObjectImpl.iceCheckMode(global::Ice.OperationMode.Normal, current.mode);
                 var istr = inS.startReadParams();
-                Persona iceP_duenio;
-                iceP_duenio = null;
-                istr.readValue((Persona v) => {iceP_duenio = v; });
-                istr.readPendingValues();
+                string iceP_rut;
+                iceP_rut = istr.readString();
                 inS.endReadParams();
-                var ret = obj.ingresarDuenio(iceP_duenio, current);
-                var ostr = inS.startWriteParams();
-                ostr.writeValue(ret);
-                ostr.writePendingValues();
-                inS.endWriteParams(ostr);
-                return inS.setResult(ostr);
-            }
-
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-            public static global::System.Threading.Tasks.Task<global::Ice.OutputStream>
-            iceD_ingresarControl(Contratos obj, global::IceInternal.Incoming inS, global::Ice.Current current)
-            {
-                global::Ice.ObjectImpl.iceCheckMode(global::Ice.OperationMode.Normal, current.mode);
-                var istr = inS.startReadParams();
-                Control iceP_control;
-                iceP_control = null;
-                istr.readValue((Control v) => {iceP_control = v; });
-                istr.readPendingValues();
-                inS.endReadParams();
-                var ret = obj.ingresarControl(iceP_control, current);
+                var ret = obj.obtenerPersona(iceP_rut, current);
                 var ostr = inS.startWriteParams();
                 ostr.writeValue(ret);
                 ostr.writePendingValues();
@@ -1713,13 +2145,15 @@ namespace Fivet.ZeroIce
 
             private static readonly string[] _all =
             {
+                "crearControl",
+                "crearFicha",
+                "crearPersona",
                 "ice_id",
                 "ice_ids",
                 "ice_isA",
                 "ice_ping",
-                "ingresarControl",
-                "ingresarDuenio",
-                "obtenerFicha"
+                "obtenerFicha",
+                "obtenerPersona"
             };
 
             public override global::System.Threading.Tasks.Task<global::Ice.OutputStream>
@@ -1735,31 +2169,39 @@ namespace Fivet.ZeroIce
                 {
                     case 0:
                     {
-                        return global::Ice.ObjectImpl.iceD_ice_id(this, inS, current);
+                        return iceD_crearControl(this, inS, current);
                     }
                     case 1:
                     {
-                        return global::Ice.ObjectImpl.iceD_ice_ids(this, inS, current);
+                        return iceD_crearFicha(this, inS, current);
                     }
                     case 2:
                     {
-                        return global::Ice.ObjectImpl.iceD_ice_isA(this, inS, current);
+                        return iceD_crearPersona(this, inS, current);
                     }
                     case 3:
                     {
-                        return global::Ice.ObjectImpl.iceD_ice_ping(this, inS, current);
+                        return global::Ice.ObjectImpl.iceD_ice_id(this, inS, current);
                     }
                     case 4:
                     {
-                        return iceD_ingresarControl(this, inS, current);
+                        return global::Ice.ObjectImpl.iceD_ice_ids(this, inS, current);
                     }
                     case 5:
                     {
-                        return iceD_ingresarDuenio(this, inS, current);
+                        return global::Ice.ObjectImpl.iceD_ice_isA(this, inS, current);
                     }
                     case 6:
                     {
+                        return global::Ice.ObjectImpl.iceD_ice_ping(this, inS, current);
+                    }
+                    case 7:
+                    {
                         return iceD_obtenerFicha(this, inS, current);
+                    }
+                    case 8:
+                    {
+                        return iceD_obtenerPersona(this, inS, current);
                     }
                 }
 

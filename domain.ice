@@ -30,17 +30,23 @@ module model {
     /**
     *Clase Persona
     */
+    ["cs:property"]
     class Persona{
 
         /**
         *PK
         */
-        int id;
+        int uid;
 
         /**
-        *Nombre: Pablo Castillo Rojas
+        *Nombre: Pablo
         */
         string nombre;
+
+        /**
+        *Apellido: Castillo
+        */
+        string apellido;
 
         /**
         *Rut: 182335622
@@ -87,12 +93,13 @@ module model {
     /**
     *Clase Ficha
     */
+    ["cs:property"]
     class Ficha{
 
         /**
         *PK
         */
-        int id;
+        int uid;
 
         /**
         *Numero de ficha
@@ -122,7 +129,7 @@ module model {
         /**
         *Sexo: Macho/Hembra
         */
-        string sexo;
+        Sexo sexo;
 
         /**
         *Color: Negro
@@ -132,17 +139,18 @@ module model {
         /**
         *Tipo: Interno/Externo
         */
-        string tipoPaciente;
+        tipoPaciente tipoPaciente;
     }
 
     /**
     *Clase Control
     */
+    ["cs:property"]
     class Control{
         /**
         *PK
         */
-        int id;
+        int uid;
 
         /**
         *Fecha: dia/mes/año
@@ -184,11 +192,12 @@ module model {
     /**
     *Clase Examen
     */
+    ["cs:property"]
     class Examen{
         /**
         *PK
         */
-        int id;
+        int uid;
 
         /**
         *Nombre del Examen: Radiografia
@@ -204,6 +213,7 @@ module model {
     /**
     *Clase Foto
     */
+    ["cs:property"]
     class Foto{
         /**
         *Foto: URL de la foto
@@ -217,21 +227,39 @@ module model {
 
     interface Contratos {
         /**
-        * Dado un numero de ficha, retorna una ficha
-        * @param numero de la ficha
-        * @return Ficha
-        */
+         *
+         * @param ficha a crear.
+         * @return ficha creada
+         */
+        Ficha crearFicha(Ficha ficha);
+
+        /**
+         *
+         * @param persona a crear
+         * @return Persona creada
+         */
+        Persona crearPersona(Persona persona);
+
+        /**
+         *
+         * @param numFicha para identificar el control.
+         * @param control a crear.
+         */
+        Control crearControl(int numFicha, Control control);
+
+        /**
+         *
+         * @param numero de la ficha a buscar.
+         * @return Ficha buscada.
+         */
         Ficha obtenerFicha(int numero);
+
         /**
-        * Se ingresa un dueño al sistema
-        * @param duenio
-        */
-        Persona ingresarDuenio(Persona duenio);
-        /**
-        * Se agrega un control al sistema
-        * @param control
-        */
-        Control ingresarControl(Control control);
+         *
+         * @param rut de la persona a buscar.
+         * @return Persona buscada.
+         */
+        Persona obtenerPersona(string rut);
     }
 
 
