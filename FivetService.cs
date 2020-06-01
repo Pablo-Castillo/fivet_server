@@ -25,9 +25,18 @@ namespace Fivet.Server
         ///</summary>
         private readonly Communicator _communicator;
 
-        public FivetService(ILogger<FivetService> logger)
+        // The System
+        private readonly TheSystemDisp_ _theSystem;
+
+        // The Contracts
+        private readonly ContratosDisp_ _contratos;
+
+        public FivetService(ILogger<FivetService> logger, TheSystemDisp_ theSystem, ContratosDisp_ contratos)
         {
             _logger = logger;
+            _logger.LogDebug("Building FivetService ..");
+            _theSystem = theSystem;
+            _contratos = contratos;
             _communicator = buildCommunicator();
         }
 
@@ -40,11 +49,8 @@ namespace Fivet.Server
 
             var adapter = _communicator.createObjectAdapterWithEndpoints("TheSystem", "tcp -z -t 15000 -p " + _port);
             
-            // The interface
-            TheSystem theSystem = new TheSystemImpl();
-
             // Register in the communicator
-            adapter.add(theSystem, Util.stringToIdentity("TheSystem"));
+            adapter.add(_theSystem, Util.stringToIdentity("TheSystem"));
 
             // Activation
             adapter.activate();
@@ -70,10 +76,10 @@ namespace Fivet.Server
         private Communicator buildCommunicator()
         {
             _logger.LogDebug("Initializing Communicator v{0} ({1}) ..", Ice.Util.stringVersion(), Ice.Util.intVersion());
-            Properties prop = Util.createProperties();
+            Properties properties = Util.createProperties();
 
             InitializationData initializationData = new InitializationData();
-            initializationData.properties = prop;
+            initializationData.properties = properties;
 
             return Ice.Util.initialize(initializationData);
 
